@@ -18,4 +18,4 @@ Feature: Contact Form
     And User populates Captcha field
     And User clicks Send button
     Then Form send successfully
-    And Message validation dispalyed
+    And Message validation displayed
