@@ -88,7 +88,7 @@ public class ContactForm_TestSteps {
 		
 		// Get error code text
 		String actualText = driver.findElement(By.cssSelector("div.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors")).getText();
-		System.out.format("Expected text : %n - Actual text %n \n : ", expectedText, actualText );
+		System.out.format("Expected text : %s - Actual text : %s \n", expectedText, actualText );
 		
 		// Verify error code value
 		Assert.assertEquals(expectedText, actualText);
@@ -104,7 +104,7 @@ public class ContactForm_TestSteps {
 		
 		// Get error code text
 		String actualText = driver.findElement(By.cssSelector("span.wpcf7-not-valid-tip")).getText();
-		System.out.format("Expected text : %n - Actual text %n \n : ", expectedText, actualText );
+		System.out.format("Expected text : %s - Actual text : %s \n", expectedText, actualText );
 		
 		// Verify error code value
 		Assert.assertEquals(expectedText, actualText);
@@ -124,7 +124,7 @@ public class ContactForm_TestSteps {
 	    //throw new PendingException();
 	}
 
-	@Then("^Message validation dispalyed")
+	@Then("^Message validation displayed")
 	public void message_validation_send() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new PendingException();
