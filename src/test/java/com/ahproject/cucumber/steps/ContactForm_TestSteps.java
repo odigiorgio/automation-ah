@@ -100,7 +100,7 @@ public class ContactForm_TestSteps {
 	@Then("^Message Erreur code captcha$")
 	public void message_Erreur_de_code_captcha() throws Throwable {
 	    
-		String expectedText = "Le code entré est incorrect.";
+		String expectedText = "Le code entré est correct.";
 		
 		// Get error code text
 		String actualText = driver.findElement(By.cssSelector("span.wpcf7-not-valid-tip")).getText();

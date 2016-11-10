@@ -10,7 +10,9 @@ import cucumber.api.junit.Cucumber;
 		,glue={"com.ahproject.cucumber.steps"}
 		,monochrome = true
 		,tags={"@ContactForm"}
-		,plugin={"pretty","junit:c:/temp/cucumber.xml"}
+		//,plugin={"pretty","junit:c:/temp/cucumber.xml"}
+		//,plugin={"pretty","html:target/Destination"} // <--- Format HTML dans répertoire Workspace\..\target\Destination
+		,plugin={"pretty","json:target/Destination/cucumber.json"} // <--- Format JSON dans répertoire Workspace\..\target\Destination
 		)
 
 public class TestRunner01 {
