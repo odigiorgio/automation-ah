@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
@@ -129,6 +130,21 @@ public class ContactForm_TestSteps {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new PendingException();
 	}
+	
+	@Then("^Contact Page is displayed$")
+	public void contact_Page_is_displayed() throws Throwable {
+		
+		String expectedText = "contact@referty.com";
+		
+		// Get error code text
+		WebElement parentElement = driver.findElement(By.className("title"));
+		String actualText = parentElement.findElement(By.tagName("envoyer un mail")).getText();
+		System.out.format("Expected text : %s - Actual text : %s \n", expectedText, actualText );
+		
+		// Verify error code value
+		Assert.assertEquals(expectedText, actualText);
+	}
+
 	
 	@After
 	public void CloseBrowser() throws Throwable {
